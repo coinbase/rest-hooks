@@ -1,7 +1,10 @@
 {
   "docs": {
     "Getting Started": [
+      "getting-started/introduction",
       "getting-started/installation",
+      "getting-started/endpoint",
+      "getting-started/data-dependency",
       "getting-started/usage",
       "guides/loading-state",
       "guides/network-errors",

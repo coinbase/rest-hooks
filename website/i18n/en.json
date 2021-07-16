@@ -127,14 +127,27 @@
       "api/Values": {
         "title": "Values"
       },
+      "getting-started/data-dependency": {
+        "title": "Colocate Data Dependencies",
+        "sidebar_label": "Data Dependencies"
+      },
       "getting-started/endpoint": {
-        "title": "getting-started/endpoint"
+        "title": "Endpoint"
       },
       "getting-started/installation": {
         "title": "Installation"
       },
+      "getting-started/introduction": {
+        "title": "Introduction"
+      },
       "getting-started/README": {
         "title": "getting-started/README"
+      },
+      "getting-started/rest": {
+        "title": "getting-started/rest"
+      },
+      "getting-started/schema": {
+        "title": "getting-started/schema"
       },
       "getting-started/usage": {
         "title": "Usage"
@@ -986,6 +999,9 @@
       },
       "version-5.0/api/version-5.0-Values": {
         "title": "Values"
+      },
+      "version-5.0/getting-started/version-5.0-endpoint": {
+        "title": "Endpoint"
       },
       "version-5.0/getting-started/version-5.0-installation": {
         "title": "Installation"

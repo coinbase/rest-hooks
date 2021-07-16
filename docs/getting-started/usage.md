@@ -81,56 +81,7 @@ and the best performance characteristics possible.
 
 APIs quickly get much more complicated! [Customizing Resources to fit your API](../guides/resource-types)
 
-## Use the Resource
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Single-->
-
-```tsx
-import { useResource } from 'rest-hooks';
-import ArticleResource from 'resources/article';
-
-export default function ArticleDetail({ id }: { id: number }) {
-  const article = useResource(ArticleResource.detail(), { id });
-  return (
-    <article>
-      <h2>{article.title}</h2>
-      <div>{article.content}</div>
-    </article>
-  );
-}
-```
-
-<!--List-->
-
-```tsx
-import { useResource } from 'rest-hooks';
-import ArticleResource from 'resources/article';
-import ArticleSummary from './ArticleSummary';
-
-export default function ArticleList({ sortBy }: { sortBy: string }) {
-  const articles = useResource(ArticleResource.list(), { sortBy });
-  return (
-    <section>
-      {articles.map(article => (
-        <ArticleSummary key={article.pk()} article={article} />
-      ))}
-    </section>
-  );
-}
-```
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-[useResource()](../api/useResource.md) guarantees access to data with sufficient [freshness](../api/Endpoint#dataexpirylength-number).
-This means it may issue network calls, and it may [suspend](../guides/loading-state) until the the fetch completes.
-Param changes will result in accessing the appropriate data, which also sometimes results in new network calls and/or
-suspends.
-
-- Fetches are centrally controlled, and thus automatically deduplicated
-- Data is centralized and normalized guaranteeing consistency across uses, even with different [endpoints](../api/Endpoint).
-  - (For example: navigating to a detail page with a single entry from a list view will instantly show the same data as the list without
-    requiring a refetch.)
 
 ## [Dispatch mutation](../api/useFetcher.md)
 
